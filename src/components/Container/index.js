@@ -1,38 +1,29 @@
 import ImageGitBg from "assets/gitbg.svg";
 
-import { Box } from "@material-ui/core";
+import { Box, Grid } from "@material-ui/core";
 
 export function Container({ children }) {
   return (
-    <Box
-      display="flex"
-      alignItems="center"
-      justifyContent="center"
-      height="100vh"
-    >
-      <Box
-        display="flex"
-        flexDirection="column"
-        border="1px solid red"
-        padding=" 0 24px 24px"
-        width="100%"
-        maxWidth="1000px"
-        height="100vh"
-        position="relative"
+    <Grid container justifyContent="center" >
+      <Grid
+        item
+        xs={12}
+        sm={8}
+        style={{ border: "1px solid red", height: "100vh", padding: "10px" }}
       >
         <Box
           style={{
             backgroundImage: `url(${ImageGitBg})`,
             backgroundRepeat: "no-repeat",
             backgroundSize: "cover",
-            width: "80%",
+            width: "50%",
             height: "80%",
             position: "absolute",
-            right: '-20%',
+            right: '10px',
           }}
         />
         {children}
-      </Box>
-    </Box>
+      </Grid>
+    </Grid>
   );
 }
