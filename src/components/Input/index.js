@@ -7,7 +7,7 @@ export function Input() {
     <TextField
       fullWidth
       id="outlined-basic"
-      label="Digite o nome do usuário"
+      label="Pesquisar usuário"
       variant="outlined"
     />
     </Box>
