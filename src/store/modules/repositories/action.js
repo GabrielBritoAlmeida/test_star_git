@@ -1,16 +1,19 @@
 import { ActionTypes } from "./types";
 
-export function repositoriesRequest() {
+export function repositoriesRequest(nameUser) {
   return {
     type: ActionTypes.repositoriesRequest,
+    payload: {
+      nameUser,
+    },
   };
 }
 
-export function repositoriesSuccess(repositories) {
+export function repositoriesSuccess(data) {
   return {
     type: ActionTypes.repositoriesSuccess,
     payload: {
-      repositories,
+      data,
     },
   };
 }

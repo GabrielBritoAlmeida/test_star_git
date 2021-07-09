@@ -7,17 +7,12 @@ export function ThemeProviderMaterial({ children }) {
       primary: {
         main: "#1976D2",
       },
-      // secondary: {
-      //   main: "#31e048",
-      // },
       background: {
         default: "#eee",
         paper: "#eee",
       },
       text: {
         primary: "#333",
-        // secondary: "#31e048",
-        // disabled: "#31e048",
       },
     },
   });

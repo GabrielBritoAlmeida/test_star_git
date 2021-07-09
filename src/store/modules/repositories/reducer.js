@@ -16,8 +16,9 @@ const Repositories = (state = INITIAL_STATE, action) => {
       }
 
       case ActionTypes.repositoriesSuccess: {
-        const { repositories } = action.payload;
-        draft.data = repositories;
+        const { data } = action.payload;
+        console.log("🚀 ~ file: reducer.js ~ line 20 ~ returnproduce ~ data", data)
+        draft.data.push(...data);
         draft.loading = false;
         break;
       }
