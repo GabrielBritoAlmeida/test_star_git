@@ -4,9 +4,9 @@ export function ThemeProviderMaterial({ children }) {
   const theme = createTheme({
     palette: {
       type: "light",
-      // primary: {
-      //   main: "#31e048",
-      // },
+      primary: {
+        main: "#1976D2",
+      },
       // secondary: {
       //   main: "#31e048",
       // },
