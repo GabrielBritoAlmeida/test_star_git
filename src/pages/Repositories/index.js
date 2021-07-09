@@ -7,12 +7,15 @@ import { Main } from "components/Main";
 
 export function Repositories() {
   const repos = useSelector((state) => state.repositories.data);
+  const favorites = useSelector((state) => state.favorites.repositoryData);
+  console.log("🚀 favorites: ", favorites)
 
   const reposUser = useMemo(
     () =>
       repos.map((repo) => (
         <BoxRepositories
-          key={repo.id}
+          key={repo?.id}
+          idRepo={repo?.id}
           nameRepo={repo?.name}
           nameUser={repo?.owner?.login}
           avatarUrlRepo={repo?.owner?.avatar_url}
