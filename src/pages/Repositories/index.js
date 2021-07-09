@@ -8,20 +8,23 @@ import { Main } from "components/Main";
 export function Repositories() {
   const repositories = useSelector((state) => state.repositories.data);
   const favorites = useSelector((state) => state.favorites.repositoryData);
-  console.log("🚀favorites: ", favorites)
 
   const reposUser = useMemo(
     () =>
-    repositories.map((repo, index) => (
-        <BoxRepositories
-          key={repo?.id}
-          idRepo={repo?.id}
-          nameRepo={repo?.name}
-          nameUser={repo?.owner?.login}
-          avatarUrlRepo={repo?.owner?.avatar_url}
-          isFavorite={favorites[index]?.nameRepo === repo?.name}
-        />
-      )),
+      repositories.map((repo) => {
+        const index = favorites.findIndex((item) => item.idRepo === repo.id);
+
+        return (
+          <BoxRepositories
+            key={repo?.id}
+            idRepo={repo?.id}
+            nameRepo={repo?.name}
+            nameUser={repo?.owner?.login}
+            avatarUrlRepo={repo?.owner?.avatar_url}
+            isFavorite={index >= 0}
+          />
+        );
+      }),
     [favorites, repositories]
   );
 
