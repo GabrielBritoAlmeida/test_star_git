@@ -17,7 +17,7 @@ const Repositories = (state = INITIAL_STATE, action) => {
 
       case ActionTypes.repositoriesSuccess: {
         const { data } = action.payload;
-        draft.data.push(...data);
+        draft.data = data;
         draft.loading = false;
         break;
       }
