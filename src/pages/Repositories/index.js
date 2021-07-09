@@ -1,4 +1,5 @@
 import { useMemo } from "react";
+import { useHistory } from "react-router-dom";
 import { useSelector } from "react-redux";
 import { Typography, Grid } from "@material-ui/core";
 import { Container } from "components/Container";
@@ -6,6 +7,7 @@ import { BoxRepositories } from "components/BoxRepositories";
 import { Main } from "components/Main";
 
 export function Repositories() {
+  const history = useHistory();
   const repositories = useSelector((state) => state.repositories.data);
   const favorites = useSelector((state) => state.favorites.repositoryData);
 
@@ -32,6 +34,12 @@ export function Repositories() {
     <Container>
       <Typography variant="h3" style={{ fontWeight: 700, margin: "40px 0" }}>
         Repositórios no Github.
+      </Typography>
+      <Typography
+        onClick={() => history.push("/favorites")}
+        style={{ fontWeight: 700, margin: "40px 0", cursor: "pointer" }}
+      >
+        Acessar favoritos.
       </Typography>
 
       <Grid container>

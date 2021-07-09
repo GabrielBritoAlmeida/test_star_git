@@ -4,13 +4,8 @@ import { Box, Grid } from "@material-ui/core";
 
 export function Container({ children }) {
   return (
-    <Grid container justifyContent="center" >
-      <Grid
-        item
-        xs={12}
-        sm={8}
-        style={{ border: "1px solid red", height: "100vh", padding: "10px" }}
-      >
+    <Grid container justifyContent="center">
+      <Grid item xs={12} sm={8} style={{ height: "100vh", padding: "10px" }}>
         <Box
           style={{
             backgroundImage: `url(${ImageGitBg})`,
@@ -19,7 +14,7 @@ export function Container({ children }) {
             width: "50%",
             height: "80%",
             position: "absolute",
-            right: '10px',
+            right: "10px",
           }}
         />
         {children}
