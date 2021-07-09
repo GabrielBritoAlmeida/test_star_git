@@ -2,7 +2,7 @@ import { useMemo } from "react";
 import { useSelector } from "react-redux";
 import { Typography, Grid } from "@material-ui/core";
 import { Container } from "components/Container";
-import { BoxRepositories } from "components/BoxRepositories";
+import { BoxRepositoriesFavorites } from "components/BoxRepositoriesFavorites";
 import { useHistory } from "react-router-dom";
 
 export function Favorites() {
@@ -14,7 +14,7 @@ export function Favorites() {
       favorites.map((repo) => {
 
         return (
-          <BoxRepositories
+          <BoxRepositoriesFavorites
             key={repo?.idRepo}
             idRepo={repo?.idRepo}
             nameRepo={repo?.nameRepo}

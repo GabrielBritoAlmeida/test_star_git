@@ -50,7 +50,7 @@ export function BoxRepositoriesFavorites({
           </Box>
         </Box>
 
-        <IconButton onClick={handleFavoriteUnStar}>
+        <IconButton onClick={handleFavoriteUnStar} title="Remover de favoritos">
           <StarOutlineIcon
             style={{
               fontSize: 48,

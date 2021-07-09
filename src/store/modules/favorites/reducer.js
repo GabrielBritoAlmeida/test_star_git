@@ -35,9 +35,7 @@ const Repositories = (state = INITIAL_STATE, action) => {
 
       case ActionTypes.deleteFavoritesSuccess: {
         const { IdRepository } = action.payload;
-        console.log("🚀 IdRepository: ", IdRepository)
-        const arrCurrent = draft.repositoryData.filter((repo) => repo.idRepo !== IdRepository)
-        console.log("🚀 ArrayCurrent: ", arrCurrent)
+        const arrCurrent = draft.repositoryData.filter((repo) => repo.idRepo !== IdRepository);
         draft.repositoryData = arrCurrent;
         draft.loading = false;
         break;
