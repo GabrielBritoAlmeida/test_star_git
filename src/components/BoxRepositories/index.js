@@ -7,7 +7,13 @@ import { repositoryRequest } from "store/modules/favorites/action";
 //Icons
 import StarOutlineIcon from "@material-ui/icons/StarOutline";
 
-export function BoxRepositories({ idRepo, nameRepo, nameUser, avatarUrlRepo }) {
+export function BoxRepositories({
+  idRepo,
+  nameRepo,
+  nameUser,
+  avatarUrlRepo,
+  isFavorite,
+}) {
   const dispatch = useDispatch();
 
   function handleFavoriteStar() {
@@ -46,7 +52,9 @@ export function BoxRepositories({ idRepo, nameRepo, nameUser, avatarUrlRepo }) {
         </Box>
 
         <IconButton onClick={handleFavoriteStar}>
-          <StarOutlineIcon style={{ fontSize: 48, color: "lightgrey" }} />
+          <StarOutlineIcon
+            style={{ fontSize: 48, color: isFavorite ? "yellow" : "lightgrey" }}
+          />
         </IconButton>
       </Box>
     </>
