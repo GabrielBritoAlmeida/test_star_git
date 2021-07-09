@@ -1,70 +1,31 @@
-# Getting Started with Create React App
+# Projeto em React e Redux
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+Projeto aplicado para teste, usando React e Redux como principais tecnologias. 
 
-## Available Scripts
+Interface desenhada com "Material-ui".
 
-In the project directory, you can run:
+Projeto pode ser clonado no Github
 
-### `yarn start`
+Instalar o pacote node com "yarn install" ou "npm install". 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Projeto publicado na Vercel, link de acesso: [https://test-star-git.vercel.app/](https://test-star-git.vercel.app/)
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/0.png](https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/0.png)
 
-### `yarn test`
+Para pesquisa dos repositórios, basta digitar o nome do usuário como no Github
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+Exemplo: GabrielBritoAlmeida   /  maykbrito  / felipefialho 
 
-### `yarn build`
+![https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/1.png](https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/1.png)
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+Ao clicar na estrela do card, será marcado como repositório favorito.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+![https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/2.png](https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/2.png)
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Em seguida, pode visualizar a lista de seus favoritos, clicando em "Acessar favoritos"
 
-### `yarn eject`
+![https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/3.png](https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/3.png)
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+Na lista de favoritos, pode clicar na estrela e remover qualquer card favorito listado.
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `yarn build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+![https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/4.png](https://github.com/GabrielBritoAlmeida/test_star_git/tree/master/src/assets/images/4.png)
