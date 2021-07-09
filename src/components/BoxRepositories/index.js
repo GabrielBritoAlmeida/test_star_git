@@ -2,7 +2,10 @@ import { useDispatch } from "react-redux";
 import { IconButton } from "@material-ui/core";
 import { Box, Typography, Avatar } from "@material-ui/core";
 
-import { repositoryRequest } from "store/modules/favorites/action";
+import {
+  repositoryRequest,
+  deleteRepositoryRequest,
+} from "store/modules/favorites/action";
 
 //Icons
 import StarOutlineIcon from "@material-ui/icons/StarOutline";
@@ -18,6 +21,10 @@ export function BoxRepositories({
 
   function handleFavoriteStar() {
     dispatch(repositoryRequest({ idRepo, nameRepo, nameUser, avatarUrlRepo }));
+  }
+
+  function handleFavoriteUnStar() {
+    dispatch(deleteRepositoryRequest(idRepo));
   }
 
   return (
@@ -51,11 +58,25 @@ export function BoxRepositories({
           </Box>
         </Box>
 
-        <IconButton onClick={handleFavoriteStar}>
-          <StarOutlineIcon
-            style={{ fontSize: 48, color: isFavorite ? "yellow" : "lightgrey" }}
-          />
-        </IconButton>
+        {isFavorite ? (
+          <IconButton onClick={handleFavoriteUnStar}>
+            <StarOutlineIcon
+              style={{
+                fontSize: 48,
+                color: "yellow",
+              }}
+            />
+          </IconButton>
+        ) : (
+          <IconButton onClick={handleFavoriteStar}>
+            <StarOutlineIcon
+              style={{
+                fontSize: 48,
+                color: "lightgrey",
+              }}
+            />
+          </IconButton>
+        )}
       </Box>
     </>
   );

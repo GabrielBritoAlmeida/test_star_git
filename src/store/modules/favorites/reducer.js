@@ -28,6 +28,25 @@ const Repositories = (state = INITIAL_STATE, action) => {
         break;
       }
 
+      case ActionTypes.deleteFavoritesRequest: {
+        draft.loading = true;
+        break;
+      }
+
+      case ActionTypes.deleteFavoritesSuccess: {
+        const { IdRepository } = action.payload;
+        const arrCurrent = draft.repositoryData.filter((repo) => repo.idRepo !== IdRepository)
+        draft.repositoryData = arrCurrent;
+        draft.loading = false;
+        break;
+      }
+
+      case ActionTypes.deleteFavoritesFailure: {
+        draft.failure = true;
+        draft.loading = false;
+        break;
+      }
+
       default: {
         draft.loading = false;
         return state;

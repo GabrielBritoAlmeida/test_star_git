@@ -23,3 +23,33 @@ export function repositoryFailure() {
     type: ActionTypes.addFavoritesFailure,
   };
 }
+
+
+export function deleteRepositoryRequest(IdRepository) {
+  return {
+    type: ActionTypes.deleteFavoritesRequest,
+    payload: {
+      IdRepository,
+    },
+  };
+}
+
+export function  deleteRepositorySuccess(IdRepository) {
+  return {
+    type: ActionTypes.deleteFavoritesSuccess,
+    payload: {
+      IdRepository,
+    },
+  };
+}
+
+export function  deleteRepositoryFailure() {
+  return {
+    type: ActionTypes.deleteFavoritesFailure,
+  };
+}
+
+
+
+
+

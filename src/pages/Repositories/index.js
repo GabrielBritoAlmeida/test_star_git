@@ -6,22 +6,23 @@ import { BoxRepositories } from "components/BoxRepositories";
 import { Main } from "components/Main";
 
 export function Repositories() {
-  const repos = useSelector((state) => state.repositories.data);
+  const repositories = useSelector((state) => state.repositories.data);
   const favorites = useSelector((state) => state.favorites.repositoryData);
+  console.log("🚀favorites: ", favorites)
 
   const reposUser = useMemo(
     () =>
-      repos.map((repo, index) => (
+    repositories.map((repo, index) => (
         <BoxRepositories
           key={repo?.id}
           idRepo={repo?.id}
           nameRepo={repo?.name}
           nameUser={repo?.owner?.login}
           avatarUrlRepo={repo?.owner?.avatar_url}
-          isFavorite={favorites[index]?.idRepo === repo?.id}
+          isFavorite={favorites[index]?.nameRepo === repo?.name}
         />
       )),
-    [favorites, repos]
+    [favorites, repositories]
   );
 
   return (
